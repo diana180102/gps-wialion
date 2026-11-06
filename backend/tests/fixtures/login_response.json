@@ -1,0 +1,22 @@
+{
+    "host": "190.25.84.40",
+    "eid": "REDACTED",
+    "gis_sid": "REDACTED",
+    "au": "DemoApps",
+    "tm": 1793984397,
+    "wsdk_version": "1.931.07",
+    "base_url": "https://hst-api.wialon.com",
+    "hw_gw_ip": "193.193.165.165",
+    "hw_gw_dns": "nl.gpsgsm.org",
+    "gis_search": "",
+    "gis_render": "",
+    "gis_geocode": "",
+    "gis_routing": "",
+    "billing_by_codes": "0",
+    "drivers_feature_flags": "5",
+    "feature_flags": "{\"notifications\":3}",
+    "video_service_url": "https://video.wialon.com",
+    "limits": {
+        "user_notification_max_text_size": 30720
+    }
+}
