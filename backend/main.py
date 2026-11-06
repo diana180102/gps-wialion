@@ -1,6 +1,15 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 
-app = FastAPI()
+app = FastAPI( title="GPS Wialon API", version="0.1.0" )
+
+api = APIRouter(prefix="/api/v1")
+
+@api.get("/health", tags=["system"])
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
+
+app.include_router(api)
+
 
 
 @app.get("/")
