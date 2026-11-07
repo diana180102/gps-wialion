@@ -38,8 +38,7 @@ class WialonClient:
         self._raise_if_error(result)
         return result
 
-    # --- internos ---------------------------------------------------------
-
+    #Validación de que existe sid
     async def _ensure_sid(self) -> str:
         async with self._lock:
             if self._sid is None:
@@ -65,6 +64,7 @@ class WialonClient:
             raise UpstreamUnavailable("Respuesta de login sin 'eid'")
         self._sid = eid
 
+    # Petición al servidor Wialon
     async def _post(self, svc: str, params: dict[str, Any], sid: str | None) -> Any:
         form: dict[str, str] = {"svc": svc, "params": json.dumps(params)}
         if sid is not None:
